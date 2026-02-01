@@ -31,6 +31,8 @@ pipeline{
                     echo "test stage"
                     cd build/
                     test -f index.html
+                    cd ..
+                    CI=true npm test
                 '''
             }    
         }
